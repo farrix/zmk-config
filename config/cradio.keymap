@@ -24,8 +24,8 @@
 
         td1: tap_dance_numbers_1 {
             compatible = "zmk,behavior-tap-dance";
-            label = "tap_dance_numbers";
-            #binding-cells = <2>;
+            label = "tap_dance_numbers_1";
+            #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp N1>, <&kp RS(N1)>;
         };
