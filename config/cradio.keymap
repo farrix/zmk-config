@@ -9,6 +9,8 @@
 #define HRML(k1,k2,k3,k4) &ht LSHFT k1  &ht LALT k2  &ht LCTRL k3  &ht LGUI k4
 #define HRMR(k1,k2,k3,k4) &ht RGUI k1  &ht RCTRL k2  &ht RALT k3  &ht RSHFT k4
 
+#define TAPPING_MS_TERM 200
+
 / {
     behaviors {
         ht: hold_tap {
@@ -28,6 +30,56 @@
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp N1>, <&kp RS(N1)>;
+        };
+
+        td2: tap_dance_2 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_2";
+            #binding-cells = <0>;
+			tapping-term-ms = <TAPPING_MS_TERM>;
+            bindings = <&kp N2>, <&kp RS(N2)>;
+        };
+		td3: tap_dance_3 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_3";
+            #binding-cells = <0>;
+			tapping-term-ms = <TAPPING_MS_TERM>;
+            bindings = <&kp N3>, <&kp RS(N3)>;
+        };
+		td4: tap_dance_4 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_4";
+            #binding-cells = <0>;
+			tapping-term-ms = <TAPPING_MS_TERM>;
+            bindings = <&kp N4>, <&kp RS(N4)>;
+        };
+		td5: tap_dance_5 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_5";
+            #binding-cells = <0>;
+			tapping-term-ms = <TAPPING_MS_TERM>;
+            bindings = <&kp N5>, <&kp RS(N5)>;
+        };
+		td6: tap_dance_6 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_6";
+            #binding-cells = <0>;
+			tapping-term-ms = <TAPPING_MS_TERM>;
+            bindings = <&kp N6>, <&kp RS(N6)>;
+        };
+		td7: tap_dance_7 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_7";
+            #binding-cells = <0>;
+			tapping-term-ms = <TAPPING_MS_TERM>;
+            bindings = <&kp N7>, <&kp RS(N7)>;
+        };
+		td8: tap_dance_8 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_8";
+            #binding-cells = <0>;
+			tapping-term-ms = <TAPPING_MS_TERM>;
+            bindings = <&kp N8>, <&kp RS(N8)>;
         };
     };
 
@@ -72,7 +124,7 @@
             &kp Q      &kp W      &kp F      &kp P      &kp B          &kp J      &kp L      &kp U      &kp Y      &kp P
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  A       │  S       │  D       │  F       │  G       │   │  H       │  J       │  K       │  L       │ ' "      │
-            HRML(A,        R,         S,         T)     &kp G         &kp M      HRMR(N,        E,         I,        O)
+            HRML(A,        R,         S,         T)     &lt 2 G         &kp M      HRMR(N,        E,         I,        O)
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ / ?      │
             &kp Z      &kp X      &kp C      &kp D      &kp V          &kp K      &kp H      &kp COMMA  &kp DOT    &kp FSLH
@@ -86,13 +138,13 @@
             bindings = <    
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│ INSERT   │  1       │  2       │  3       │          │   │ HOME     │ PAGE DN  │ PAGE UP  │ END      │  :       │
-            &kp INS    &kp N1     &kp N2     &kp N3     &trans         &kp HOME   &kp N7     &kp N8     &kp N9    &kp COLON
+            &kp INS    &kp N1     &kp N2     &kp N3     &trans         &kp HOME   &td7     &td8     &kp N9    &kp COLON
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ DELETE   │  4       │  5       │  6       │          │   │ LEFT     │ DOWN     │ UP       │ RIGHT    │  ;       │
-            &kp DEL    &kp N4     &kp N5     &kp N6     &trans         &kp DOT   &kp N4   &kp N5   &kp N6   &kp SEMI
+            &kp DEL    &kp N4     &kp N5     &kp N6     &trans         &kp DOT   &td4   &td5   &td6   &kp SEMI
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ CAPS     │  7       │  8       │  9       │  0       │   │          │          │          │          │          │
-           &caps_word  &kp N7     &kp N8     &kp N9     &kp N0         &kp N0     &td1    &kp N2     &kp N3    &tog 1
+           &caps_word  &kp N7     &kp N8     &kp N9     &kp N0         &kp N0     &td1    &td2     &td3    &tog 1
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &trans     &kp ESC        &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
