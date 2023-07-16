@@ -55,12 +55,12 @@
         layers = <0>;
         };
 
-        // layer2stick_combo {
-        // timeout-ms = <50>;
-        // key-positions = <10 14>;
-        // bindings = <&tog 1>;
-        // layers = <0>;
-        // };
+        layer2stick_combo {
+        timeout-ms = <50>;
+        key-positions = <10 14>;
+        bindings = <&tog 1>;
+        layers = <0>;
+        };
     };
 
     keymap {
@@ -92,7 +92,7 @@
             &kp DEL    &kp N4     &kp N5     &kp N6     &trans         &kp DOT   &kp N4   &kp N5   &kp N6   &kp SEMI
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ CAPS     │  7       │  8       │  9       │  0       │   │          │          │          │          │          │
-           &caps_word  &kp N7     &kp N8     &kp N9     &kp N0         &kp N0     &kp N1    &kp N2     &kp N3    &trans
+           &caps_word  &kp N7     &kp N8     &kp N9     &kp N0         &kp N0     &kp N1    &kp N2     &kp N3    &tog 1
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &trans     &kp ESC        &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
