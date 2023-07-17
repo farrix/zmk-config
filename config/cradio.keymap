@@ -182,7 +182,7 @@
             &kp GRAVE &kp TILDE &kp MINUS   &kp UNDER   &kp PRCNT      &trans  &kp MINUS  &kp EQUAL  &kp BSLH   &kp GRAVE
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │  &       │  _       │  +       │  │       │          │
-            &trans     &trans     &kp BSLH     &kp PIPE     &trans         &kp AMPS   &kp UNDER  &kp PLUS   &kp PIPE   &trans
+            &kp APOS     &kp DQT     &kp BSLH     &kp PIPE     &trans         &kp AMPS   &kp UNDER  &kp PLUS   &kp PIPE   &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &trans     &trans         &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
