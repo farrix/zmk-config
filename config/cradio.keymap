@@ -134,6 +134,13 @@
         bindings = <&kp ENTER>;
         layers = <0>;
         };
+
+        backspace_combo {
+        timeout-ms = <50>;
+        key-positions = <16 17 18>;
+        bindings = <&kp BSPC>;
+        layers = <0>;
+        };
     };
 
     keymap {
@@ -165,7 +172,7 @@
             &kp DEL    &kp LEFT     &kp DOWN     &kp RIGHT     &trans         &kp DOT   &td4   &td5   &td6   &kp SEMI
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ CAPS     │  7       │  8       │  9       │  0       │   │          │          │          │          │          │
-           &caps_word  &kp N7     &kp N8     &kp N9     &kp N0         &kp N0     &td1    &td2     &td3    &tog 1
+           &caps_word  &kp N7     &kp N8     &kp N9     &kp N0         &kp N0     &td1    &td2     &td3    &kp PLUS
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &trans     &kp ESC        &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
@@ -209,7 +216,7 @@
         gaming_layer {
             bindings = <
         
-            &kp N1      &kp N2      &kp N3      &kp N4      &kp N5          &kp C_VOLUME_UP      &kp L      &kp U      &kp Y      &kp P
+            &kp N1      &kp N2      &kp N3      &kp N4      &kp N5          &kp C_VOLUME_UP      &kp L      &kp I      &kp Y      &kp P
             &kp TAB     &kp Q       &kt W       &kp E       &kp R          &kp C_VOLUME_DOWN     HRMR(N,        E,         I,        O)
             &kp ESC     &kp A      &kp S      &kp D      &kp Z          &kp M      &kp H      &kp COMMA  &kp DOT    &trans
                                             &kp LEFT_SHIFT   &kp SPACE     &kp BSPC  &lt 1 SPACE
