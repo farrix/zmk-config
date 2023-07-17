@@ -120,6 +120,13 @@
         bindings = <&tog 1>;
         layers = <0 1>;
         };
+
+        layer4stick_combo {
+        timeout-ms = <50>;
+        key-positions = <0 9>;
+        bindings = <&tog 4>;
+        layers = <0 4>;
+        };
     };
 
     keymap {
@@ -189,6 +196,17 @@
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &trans     &trans         &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
+            >;
+        };
+
+        gaming_layer {
+            bindings = <
+        
+            &kp N1      &kp N2      &kp N3      &kp N4      &kp N5          &kp C_VOLUME_UP      &kp L      &kp U      &kp Y      &kp P
+            &kp TAB     &kp Q       &kp W       &kp E       &kp R          &kp C_VOLUME_DOWN     HRMR(N,        E,         I,        O)
+            &kp ESC     &kp A      &kp S      &kp D      &kp Z          &kp M      &kp H      &kp COMMA  &kp DOT    &trans
+                                            &kp LEFT_SHIFT   &kp SPACE     &kp BSPC  &lt 1 SPACE
+        
             >;
         };
     };
