@@ -107,11 +107,18 @@
         layers = <0>;
         };
 
+        save_combo {
+        timeout-ms = <50>;
+        key-positions = <10 12>;
+        bindings = <&kp LC(S)>;
+        layers = <0>;
+        };
+
         layer2stick_combo {
         timeout-ms = <50>;
         key-positions = <10 14>;
         bindings = <&tog 1>;
-        layers = <0>;
+        layers = <0 1>;
         };
     };
 
