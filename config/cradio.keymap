@@ -132,14 +132,14 @@
         timeout-ms = <50>;
         key-positions = <11 12 13>;
         bindings = <&kp ENTER>;
-        layers = <0>;
+        layers = <0 1>;
         };
 
         backspace_combo {
         timeout-ms = <50>;
         key-positions = <16 17 18>;
         bindings = <&kp BSPC>;
-        layers = <0>;
+        layers = <0 1>;
         };
 
         printscreen_combo {
