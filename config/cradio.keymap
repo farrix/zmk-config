@@ -141,6 +141,13 @@
         bindings = <&kp BSPC>;
         layers = <0>;
         };
+
+        printscreen_combo {
+        timeout-ms = <50>;
+        key-positions = < 23 26>;
+        bindings = <&kp PRINTSCREEN>;
+        layers = <0>;
+        };
     };
 
     keymap {
