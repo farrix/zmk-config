@@ -81,6 +81,30 @@
 			tapping-term-ms = <TAPPING_MS_TERM>;
             bindings = <&kp N8>, <&kp RS(N8)>;
         };
+
+        // symbols td
+
+        tdpren: tap_dance_pren {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_pren";
+            #binding-cells = <0>;
+			tapping-term-ms = <TAPPING_MS_TERM>;
+            bindings = <&kp KP_LEFT_PARENTHESIS>, <&kp KP_RIGHT_PARENTHESIS>;
+        };
+        tdlbkt: tap_dance_lbkt {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_lbkt";
+            #binding-cells = <0>;
+			tapping-term-ms = <TAPPING_MS_TERM>;
+            bindings = <&kp LEFT_BRACKET>, <&kp RIGHT_BRACKET>;
+        };
+        tdlbrc: tap_dance_lbrc {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_lbrc";
+            #binding-cells = <0>;
+			tapping-term-ms = <TAPPING_MS_TERM>;
+            bindings = <&kp LEFT_BRACE>, <&kp RIGHT_BRACE>;
+        };
     };
 
     conditional_layers {
@@ -190,13 +214,13 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│          │  [       │  {       │  }       │          │   │  ^       │  (       │  )       │  ]       │  ~       │
-            &kp ESC     &kp LBKT   &kp PLUS   &kp EQUAL   &trans         &kp CARET  &kp LPAR   &kp RPAR   &kp RBKT   &kp TILDE
+            &kp ESC     &kp LBKT   &kp PLUS   &kp EQUAL   &tdpren         &kp CARET  &kp LPAR   &kp RPAR   &kp RBKT   &kp TILDE
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  !       │  @       │  #       │  $       │  %       │   │  *       │  -       │  =       │  \       │  `       │
-            &kp GRAVE &kp TILDE &kp MINUS   &kp UNDER   &kp PRCNT      &trans  &kp MINUS  &kp EQUAL  &kp BSLH   &kp GRAVE
+            &kp GRAVE &kp TILDE &kp MINUS   &kp UNDER   &tdlbkt      &trans  &kp MINUS  &kp EQUAL  &kp BSLH   &kp GRAVE
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │  &       │  _       │  +       │  │       │          │
-            &kp APOS     &kp DQT     &kp BSLH     &kp PIPE     &trans         &kp AMPS   &kp UNDER  &kp PLUS   &kp PIPE   &trans
+            &kp APOS    &kp DQT  &kp BSLH  &kp PIPE     &tdlbrc         &kp AMPS   &kp UNDER  &kp PLUS   &kp PIPE   &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &trans     &trans         &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
