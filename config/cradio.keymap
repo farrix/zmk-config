@@ -89,7 +89,7 @@
             label = "TAP_DANCE_pren";
             #binding-cells = <0>;
 			tapping-term-ms = <TAPPING_MS_TERM>;
-            bindings = <&kp KP_LEFT_PARENTHESIS>, <&kp KP_RIGHT_PARENTHESIS>;
+            bindings = <&kp LEFT_PARENTHESIS>, <&kp RIGHT_PARENTHESIS>;
         };
         tdlbkt: tap_dance_lbkt {
             compatible = "zmk,behavior-tap-dance";
