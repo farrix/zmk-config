@@ -82,7 +82,7 @@
             bindings = <&kp N8>, <&kp RS(N8)>;
         };
         
-        tdc: hold_tap {
+        tc: hold_tap {
             label = "TAP_DANCE_CONSTANT";
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -296,8 +296,8 @@
             bindings = <
         
             &kp N1      &kp N2      &kp N3      &kp N4      &kp N5          &kp C_VOLUME_UP      &kp L      &kp I      &kp Y      &kp P
-            &kp TAB     &kp Q       &tdc W W      &kp E       &kp R          &kp C_VOLUME_DOWN     HRMR(N,        E,         I,        O)
-            &kp ESC     &tdc A A     &tdc S S     &tdc D D      &kp Z          &kp M      &kp H      &kp COMMA  &kp DOT    &trans
+            &kp TAB     &kp Q       &tc W W      &kp E       &kp R          &kp C_VOLUME_DOWN     HRMR(N,        E,         I,        O)
+            &kp ESC     &tc A A     &tc S S     &tc D D      &kp Z          &kp M      &kp H      &kp COMMA  &kp DOT    &trans
                                             &kp LEFT_SHIFT   &kp SPACE     &kp BSPC  &lt 1 SPACE
         
             >;
