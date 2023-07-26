@@ -83,7 +83,7 @@
         };
         
         tc: hold_tap {
-            label = "TAP_DANCE_CONSTANT";
+            label = "hold_tap";
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
