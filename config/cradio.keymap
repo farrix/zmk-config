@@ -82,15 +82,36 @@
             bindings = <&kp N8>, <&kp RS(N8)>;
         };
         
-        tc: hold_tap {
-            label = "hold_tap";
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <220>;
-            quick-tap-ms = <150>;
-            global-quick-tap;
-            bindings = <&kp>, <&kt>;
+        tdup: tap_dance_up {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_up";
+            #binding-cells = <0>;
+			tapping-term-ms = <220>;
+            bindings = <&kp W>, <&kt W>;
+        };
+
+        tddown: tap_dance_down {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_down";
+            #binding-cells = <0>;
+			tapping-term-ms = <220>;
+            bindings = <&kp S>, <&kt S>;
+        };
+
+        tdleft: tap_dance_left {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_left";
+            #binding-cells = <0>;
+			tapping-term-ms = <220>;
+            bindings = <&kp A>, <&kt A>;
+        };
+
+        tdright: tap_dance_right {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_right";
+            #binding-cells = <0>;
+			tapping-term-ms = <220>>;
+            bindings = <&kp D>, <&kt D>;
         };
 
         // symbols td
@@ -296,8 +317,8 @@
             bindings = <
         
             &kp N1      &kp N2      &kp N3      &kp N4      &kp N5          &kp C_VOLUME_UP      &kp L      &kp I      &kp Y      &kp P
-            &kp TAB     &kp Q       &tc W W      &kp E       &kp R          &kp C_VOLUME_DOWN     HRMR(N,        E,         I,        O)
-            &kp ESC     &tc A A     &tc S S     &tc D D      &kp Z          &kp M      &kp H      &kp COMMA  &kp DOT    &trans
+            &kp TAB     &kp Q       &tdup      &kp E       &kp R          &kp C_VOLUME_DOWN     HRMR(N,        E,         I,        O)
+            &kp ESC     &tdleft     &tddown     &tdright      &kp Z          &kp M      &kp H      &kp COMMA  &kp DOT    &trans
                                             &kp LEFT_SHIFT   &kp SPACE     &kp BSPC  &lt 1 SPACE
         
             >;
