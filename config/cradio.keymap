@@ -110,7 +110,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_right";
             #binding-cells = <0>;
-			tapping-term-ms = <220>>;
+			tapping-term-ms = <220>;
             bindings = <&kp D>, <&kt D>;
         };
 
