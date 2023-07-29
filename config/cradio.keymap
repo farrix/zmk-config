@@ -24,6 +24,18 @@
             bindings = <&kp>, <&kp>;
         };
 
+        // gaming layer
+        gltd1: tap_dance_gaming_1 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "tap_dance_gaming_1";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp C>, <&kp RS(C)>;
+        };
+
+
+        // typing layer tapdance.
+
         td1: tap_dance_numbers_1 {
             compatible = "zmk,behavior-tap-dance";
             label = "tap_dance_numbers_1";
@@ -238,6 +250,34 @@
         key-positions = <6 16>;
         bindings = <&kp SPACE>;
         layers = <0 1>;
+        };
+
+        gamelayer_c_combo {
+        timeout-ms = <50>;
+        key-positions = <2 12>;
+        bindings = <&gltd1>;
+        layers = <4>;
+        };
+
+        gamelayer_f5_combo {
+        timeout-ms = <50>;
+        key-positions = <0 10>;
+        bindings = <&kp F5>;
+        layers = <4>;
+        };
+
+        gamelayer_f8_combo {
+        timeout-ms = <50>;
+        key-positions = <10 20>;
+        bindings = <&kp F8>;
+        layers = <4>;
+        };
+
+        gamelayer_o_combo {
+        timeout-ms = <50>;
+        key-positions = <12 22>;
+        bindings = <&kp O>;
+        layers = <4>;
         };
 
         
