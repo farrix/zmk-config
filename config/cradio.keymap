@@ -367,7 +367,7 @@
         linux_layer {
             bindings = <
         
-            &kp N1      &kp N2      &kp N3      &trans      &kp N5          &kp LG(Q)      &kp LG(T)      &kp UP      &kp LG(F)      &kp P
+            &kp N1      &kp N2      &kp N3      &trans      &kp N5          &kp LG(Q)      &kp LG(T)      &kp UP      &kp LG(F)      &kp LC(LS(F2))
             &kp TAB     &kp Q       &tdup      &kp E       &kp R          &kp LG(M)    &kp LEFT &kp DOWN &kp RIGHT &kp LG(RIGHT)
             &kp ESC     &tdleft     &tddown     &tdright      &kp F          &kp ESC      &kp H      &kp COMMA  &kp DOT    &trans
                                             &kp LEFT_SHIFT   &kp LEFT_CONTROL     &kp LEFT_GUI  &kp LG(ENTER)
