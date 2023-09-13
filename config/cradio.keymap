@@ -73,6 +73,15 @@
                 bindings = <&kp N5>, <&kp F5>;
             };
 
+            gw2ws: tap_dance_gaming_7 {
+                // guildwars2 weapon swap.
+                compatible = "zmk,behavior-tap-dance";
+                label = "tap_dance_gaming_7";
+                #binding-cells = <0>;
+                tapping-term-ms = <200>;
+                bindings = <&kp E>, <&kp GRAVE>;
+            };
+
 
         // typing layer tapdance.
 
@@ -397,7 +406,7 @@
             bindings = <
         
             &td1F1      &td1F2      &td1F3      &td1F4      &td1F5          &kp C_VOLUME_UP      &kp L      &kp I      &kp Y      &kp P
-            &kp TAB     &kp Q       &tdup      &kp E       &kp X          &kp C_VOLUME_DOWN     HRMR(N,        E,         I,        O)
+            &kp TAB     &kp Q       &tdup      &gw2ws       &kp X          &kp C_VOLUME_DOWN     HRMR(N,        E,         I,        O)
             &kp ESC     &tdleft     &tddown     &tdright      &kp F          &kp M      &kp H      &kp COMMA  &kp DOT    &trans
                                             &kp LEFT_SHIFT   &kp SPACE     &kp BSPC  &lt 1 SPACE
         
