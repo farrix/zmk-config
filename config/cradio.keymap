@@ -25,13 +25,53 @@
         };
 
         // gaming layer
-        gltd1: tap_dance_gaming_1 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "tap_dance_gaming_1";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp C>, <&kp RS(C)>;
-        };
+            gltd1: tap_dance_gaming_1 {
+                compatible = "zmk,behavior-tap-dance";
+                label = "tap_dance_gaming_1";
+                #binding-cells = <0>;
+                tapping-term-ms = <200>;
+                bindings = <&kp C>, <&kp RS(C)>;
+            };
+
+            td1F1: tap_dance_gaming_2 {
+                compatible = "zmk,behavior-tap-dance";
+                label = "tap_dance_gaming_2";
+                #binding-cells = <0>;
+                tapping-term-ms = <200>;
+                bindings = <&kp N1>, <&kp F1>;
+            };
+
+            td1F2: tap_dance_gaming_3 {
+                compatible = "zmk,behavior-tap-dance";
+                label = "tap_dance_gaming_3";
+                #binding-cells = <0>;
+                tapping-term-ms = <200>;
+                bindings = <&kp N2>, <&kp F2>;
+            };
+
+            td1F3: tap_dance_gaming_4 {
+                compatible = "zmk,behavior-tap-dance";
+                label = "tap_dance_gaming_4";
+                #binding-cells = <0>;
+                tapping-term-ms = <200>;
+                bindings = <&kp N3>, <&kp F3>;
+            };
+
+            td1F4: tap_dance_gaming_5 {
+                compatible = "zmk,behavior-tap-dance";
+                label = "tap_dance_gaming_5";
+                #binding-cells = <0>;
+                tapping-term-ms = <200>;
+                bindings = <&kp N4>, <&kp F4>;
+            };
+
+            td1F5: tap_dance_gaming_6 {
+                compatible = "zmk,behavior-tap-dance";
+                label = "tap_dance_gaming_6";
+                #binding-cells = <0>;
+                tapping-term-ms = <200>;
+                bindings = <&kp N5>, <&kp F5>;
+            };
 
 
         // typing layer tapdance.
@@ -356,8 +396,8 @@
         gaming_layer {
             bindings = <
         
-            &kp N1      &kp N2      &kp N3      &kp N4      &kp N5          &kp C_VOLUME_UP      &kp L      &kp I      &kp Y      &kp P
-            &kp TAB     &kp Q       &tdup      &kp E       &kp R          &kp C_VOLUME_DOWN     HRMR(N,        E,         I,        O)
+            &td1F1      &td1F2      &td1F3      &td1F4      &td1F5          &kp C_VOLUME_UP      &kp L      &kp I      &kp Y      &kp P
+            &kp TAB     &kp Q       &tdup      &kp E       &kp X          &kp C_VOLUME_DOWN     HRMR(N,        E,         I,        O)
             &kp ESC     &tdleft     &tddown     &tdright      &kp F          &kp M      &kp H      &kp COMMA  &kp DOT    &trans
                                             &kp LEFT_SHIFT   &kp SPACE     &kp BSPC  &lt 1 SPACE
         
