@@ -30,7 +30,7 @@
                 label = "tap_dance_gaming_1";
                 #binding-cells = <0>;
                 tapping-term-ms = <200>;
-                bindings = <&kp C>, <&kp RS(C)>;
+                bindings = <&kp F>, <&kp RS(C)>;
             };
 
             td1F1: tap_dance_gaming_2 {
@@ -300,11 +300,26 @@
         bindings = <&kp SPACE>;
         layers = <0 1>;
         };
+        // gaming combos.
 
         gamelayer_c_combo {
         timeout-ms = <50>;
         key-positions = <2 12>;
         bindings = <&gltd1>;
+        layers = <4>;
+        };
+
+        guildwar_2_combo_weaponswap {
+        timeout-ms = <50>;
+        key-positions = <3 13>;
+        bindings = <&kp GRAVE>;
+        layers = <4>;
+        };
+
+        guildwar_2_combo_mount {
+        timeout-ms = <50>;
+        key-positions = <12 22>;
+        bindings = <&kp X>;
         layers = <4>;
         };
 
@@ -322,12 +337,6 @@
         layers = <4>;
         };
 
-        gamelayer_o_combo {
-        timeout-ms = <50>;
-        key-positions = <12 22>;
-        bindings = <&kp O>;
-        layers = <4>;
-        };
 
         
     };
