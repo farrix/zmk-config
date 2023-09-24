@@ -82,6 +82,7 @@
                 bindings = <&kp E>, <&kp GRAVE>;
             };
 
+    
 
         // typing layer tapdance.
 
@@ -148,7 +149,7 @@
             label = "TAP_DANCE_up";
             #binding-cells = <0>;
 			tapping-term-ms = <220>;
-            bindings = <&kp W>, <&kt W>;
+            bindings = <&kp LS(DOWN)>, <&kt W>;
         };
 
         tddown: tap_dance_down {
@@ -300,6 +301,7 @@
         bindings = <&kp SPACE>;
         layers = <0 1>;
         };
+        
         // gaming combos.
 
         gamelayer_c_combo {
@@ -314,6 +316,13 @@
         key-positions = <3 13>;
         bindings = <&kp GRAVE>;
         layers = <4>;
+        };
+
+        guildwar_2_heals {
+        timeout-ms = <50>;
+        key-positions = <4 14>;
+        bindings = <&kp N6>;
+        layers = <4>; // gaming layer
         };
 
         guildwar_2_combo_mount {
