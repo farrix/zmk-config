@@ -336,7 +336,7 @@
 
         guildwar_2_combo_7 {
         timeout-ms = <50>;
-        key-positions = <2 12>;
+        key-positions = <1 11>;
         bindings = <&kp N7>;
         layers = <4>;
         };
